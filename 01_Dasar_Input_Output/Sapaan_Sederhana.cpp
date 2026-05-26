@@ -1,11 +1,13 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
-int main(){
-    String nama;
+int main() {
+    string nama;
 
-    cin >> nama
-    cout << "Haloo " << nama << endl
+    cout << "Tuliskan nama Anda: ";
+    cin >> nama;
+    cout << "Haloo " << nama << endl;
 
     return 0;
 }

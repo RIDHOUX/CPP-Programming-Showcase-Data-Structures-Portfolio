@@ -1,28 +1,30 @@
-include <iostream>
+#include <iostream>
 using namespace std;
 
-int main(){
-	int NumberOfPrices = 0;
-	int TotalPrices = 0;
-	int price = 0;
-	
-	cout << "Masukan harga: "
-	cin >> 	Price;
-	
-	While (Price > 0) {
-		NumberOfPrices++;
-		TotalPrices += Price;
-		
-		cout << "Masukan harga: "
-		cin >> 	Price;
-	}
-	
-	 if (NumberOfPrices > 0) {
-	 	int AveragePrice = TotalPrices
-	 	cout << "Rata-rata harga: " << AveragePrice << endl;
-	}else{
-		cout << "Tidak ada harga yang dimasukkan" << endl;
-	}
-	
-	return 0;
+int main() {
+    int numberOfPrices = 0;
+    int totalPrices = 0;
+    int price = 0;
+
+    cout << "Masukkan harga: ";
+    cin >> price;
+
+    while (price > 0) {
+        numberOfPrices++;
+        totalPrices += price;
+
+        cout << "Masukkan harga: ";
+        cin >> price;
+    }
+
+    if (numberOfPrices > 0) {
+        double averagePrice = (double)totalPrices / numberOfPrices;
+        cout << "Total Item      : " << numberOfPrices << endl;
+        cout << "Total Harga     : Rp " << totalPrices << endl;
+        cout << "Rata-rata Harga : Rp " << averagePrice << endl;
+    } else {
+        cout << "Tidak ada harga yang dimasukkan." << endl;
+    }
+
+    return 0;
 }

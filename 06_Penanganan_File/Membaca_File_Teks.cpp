@@ -1,28 +1,32 @@
+#include <iostream>
 #include <fstream>
-#include  <iostream>
 #include <string>
-
 using namespace std;
 
 int main() {
-    //KAMUS
-    string NAMA_FILE = "hello.txt";
+    // KAMUS
+    string nama_file = "Hello.txt";
     ifstream fin;
     string s1;
     int i1;
     string y1;
 
-    //ALGORITMA
-    fin.open("hello.txt");
-    fin >> s1;
-    fin >> i1;
-    fin >> y1;
+    // ALGORITMA
+    fin.open(nama_file);
+    if (fin.is_open()) {
+        fin >> s1;
+        fin >> i1;
+        fin >> y1;
 
-    cout << s1 << endl;
-    cout << i1 << endl;
-    cout << y1 << endl;
+        cout << "Isi File '" << nama_file << "':" << endl;
+        cout << "Kata 1: " << s1 << endl;
+        cout << "Angka : " << i1 << endl;
+        cout << "Kata 2: " << y1 << endl;
 
-fin.close();
+        fin.close();
+    } else {
+        cout << "Gagal membuka file '" << nama_file << "'!" << endl;
+    }
 
     return 0;
 }
