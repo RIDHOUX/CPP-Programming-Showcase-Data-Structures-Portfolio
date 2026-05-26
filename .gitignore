@@ -1,0 +1,18 @@
+# ==========================================
+# GITIGNORE UNTUK PROYEK C++ PRAKTIKUM
+# ==========================================
+
+# Mengabaikan file eksekusi (executable) kompilasi Windows
+*.exe
+
+# Mengabaikan file objek hasil kompilasi g++
+*.o
+*.obj
+
+# Mengabaikan folder konfigurasi editor VS Code
+.vscode/
+
+# Mengabaikan temporary files atau file cadangan compiler
+*.tmp
+*.bak
+*.log
